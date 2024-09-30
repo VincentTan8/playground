@@ -28,6 +28,9 @@
       :index = "list.length - index"
     />
   </div>
+  <div>
+    <p>{{ $t('welcome') }}</p>
+  </div>
 </template>
 
 <style>

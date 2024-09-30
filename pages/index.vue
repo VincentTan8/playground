@@ -24,18 +24,25 @@ const woaClick = () => console.log('nice click')
         class="rounded px-1 text-gray-900 bg-yellow-500 hover:bg-yellow-600 dark:text-white focus:outline-none focus:ring"
         @click="useMyGlobalStore().sayHello(title)"
       >
-      UButton Greet Me
+      {{$t('UButton Greet Me')}}
       </UButton>
 
       <button class="rounded-full px-6 py-4 text-gray-900 bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 dark:text-white">
-      Mash Me normal button
+      {{$t('Mash Me normal button')}}
       </button>
 
       <NuxtLink to="/about"> 
-        <Button :onClick="()=>{}" classType="">ABOUT nuxtlink with button</Button> 
+        <Button :onClick="()=>{}" classType="">{{$t('ABOUT nuxtlink with button')}}</Button> 
       </NuxtLink>
 
-      <Button :onClick="() => useMyGlobalStore().sayHello(title)" classType="base"> Custom Button </Button>
+      <Button :onClick="() => useMyGlobalStore().sayHello(title)" classType="base"> {{ $t('Custom Button')}} </Button>
     </div>
+
+
+    <div>
+      <p>{{ $t('welcome') }}</p>
+    </div>
+
+
   </div>
 </template>

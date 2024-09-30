@@ -16,19 +16,23 @@
 
   });
 
-  //needs to be transferred to a custom style sheet
+  //needs to be transferred to a custom style sheet 
+  //or refactor to computed()
   switch (props.classType) {
     case 'base': 
-      newClass.value = "rounded px-6 py-4 text-gray-900 bg-yellow-500 lowercase hover:bg-yellow-600 active:bg-yellow-700 dark:text-white focus:outline-none focus:ring";
+      newClass.value = "rounded-full px-6 py-4 text-gray-900 bg-yellow-500 lowercase hover:bg-yellow-600 active:bg-yellow-700 dark:text-white focus:outline-none focus:ring";
+      break;
+    case 'small':
+      newClass.value = "rounded px-4 py-2 text-gray-900 bg-yellow-500 uppercase hover:bg-yellow-600 active:bg-yellow-700 dark:text-white focus:outline-none focus:ring";
       break;
     default:
-      newClass.value = "rounded-full text-white bg-yellow-500 uppercase py-4 px-6 font-semibold text-sm tracking-wider";
+      newClass.value = "rounded-full px-6 py-4 text-white bg-yellow-500 uppercase font-semibold text-sm tracking-wider";
       break;
   }
 
   const handleClick = () => {
     props.onClick()
-    myButton.value?.blur
+    myButton.value?.blur //supposed to remove focus from the button
   }
 
 </script>
@@ -44,5 +48,4 @@
 </template>
 
 <style scoped>
-  
 </style>

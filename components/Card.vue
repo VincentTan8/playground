@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   const props = defineProps({
+    //tl, m, br, red should be removed since these are props used for a playing card
     tl: {
       type: String,
       required: true
